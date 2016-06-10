@@ -615,9 +615,9 @@ void MainPage::GetPreviewFrameButton_Click(Object^, RoutedEventArgs^)
 void MainPage::captureThread() {
 	/********************/
 	//Embedded Serial Number and Model name
-	String^ Pi_Serial = "1242-1282-1221-5555";
-	String^ Pi_Name = "Final Destination";
-	String^ API = "http://people-count.azurewebsites.net/api/IdGet/";
+	String^ Pi_Serial = "<Insert your desired serial number here>";
+	String^ Pi_Name = "<Insert your Desired Pi name here>";
+	String^ API = "<Insert your Web Api target here>";
 	String^ Url = API + Pi_Serial;
 	/********************/
 
@@ -650,7 +650,7 @@ void MainPage::captureThread() {
 		if (m == 1) {
 			/*SEND POST REQUEST*/
 			HttpClient^ x = ref new HttpClient();
-			Uri^ uri = ref new Uri("http://people-count.azurewebsites.net/api/InfoGet/Pi01");
+			Uri^ uri = ref new Uri("<Insert your web api here>");
 
 			//build the json content of the POST request
 			Platform::Collections::Map<String^, String^> ^content = ref new Platform::Collections::Map<String^, String^>();
